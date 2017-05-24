@@ -3,7 +3,7 @@
  
 projects I have done:
 
-![alt text](https://github.com/NickDuval/programmingPortfolio/blob/master/calculator.png)
+![alt text](https://github.com/NickDuval/programmingPortfolio/blob/master/claculator.png)
 
 ![alt text](https://github.com/NickDuval/programmingPortfolio/blob/master/test1.png)
 
