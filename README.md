@@ -1,8 +1,6 @@
 ## programming Portfolio
 ## Nick Duval 2017
-
-
-Inline-style: 
+ 
 ![alt text](https://github.com/NickDuval/programmingPortfolio/calculator.png)
 
 ![alt text](https://github.com/NickDuval/programmingPortfolio/test1.png)
