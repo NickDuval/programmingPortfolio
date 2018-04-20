@@ -1,0 +1,5 @@
+We have 11,000 gallon truck of water
+One man can drink x amount of water a day
+How long will it take to drink it all
+
+11,000 gallon water / average oz drank per day = time taken to drink all water

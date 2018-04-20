@@ -1,0 +1,19 @@
+1) Java is a high level programming language.
+2) Java’s first program ,applets, came out in 1995.
+3) Java is easy to use compared to other languages.
+4) Java has large libraries to help someone write more easily.
+5) Virtual Machine simulates a CPU.
+6) There have been many updates to Java and it grew quickly.
+7) It is safe and portable.
+8) Java can run on almost any computer.
+9) Java was initially designed for the internet.
+10) There are packages that can be used to help a person program.
+
+
+public class HelloPrinter
+{
+	public static void main(String[] args)
+	{
+	  System.out.println("Hello, World!");
+	}
+}
