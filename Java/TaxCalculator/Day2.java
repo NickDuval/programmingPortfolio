@@ -190,8 +190,15 @@ public class Day2{
 		day.add(grossTF);
 		System.out.println("how many hours did you work today? (only in numbers)");
 		day.add(hoursTF);
-		day.add(doneBT);
 
+		day.add(doneBT);
+		doneBT.setBounds();
+		doneBT.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				//do calculations
+			}
+		});
+		filerConditionJP.add(doneBT)
 
 		homeBT.setBounds(850,1070,100,30);
 		homeBT.addActionListener(new ActionListener() {
@@ -199,7 +206,7 @@ public class Day2{
             	//go to start screen    
         	}
       	}); 
-      	salaryJP.add(homeBT);
+      	filerConditionJP.add(homeBT);
 
       	backBT.setBounds(50,1070,100,30);
       	backBT.addActionListener(new ActionListener() {
@@ -207,6 +214,7 @@ public class Day2{
             	salary();   
         	}
       	}); 
+      	filerConditionJP.add(backBT);
 
 		salaryJP.setVisible(false);
 		filerConditionjp.setVisible(true);
