@@ -1,0 +1,649 @@
+//if led = player2{x-2 < pin < x} //basiclly if pin is less than x(selected piece pin#) and greater than a pin of
+//x-a(a # saying move is only one space away)
+//if led = player1{x+2 > pin > x} //^
+
+//make a class reset for starting turn over
+//make a class for reset but not change positions of things(multiple jumps)
+
+//add crowning and capturing
+
+//if(redvalue > 0 || greenvalue > 0 || bluevalue > 0){
+//  piece = true;
+//}
+
+//add button on side to toggle AI and human opponent
+//use nested for loop to loop through rows then hop down colomns
+//for(i = 0; i < board.length; i++){
+//for(j = 0; j < board.length; j++){
+//if()
+//i = 0;
+//}
+//}
+
+//start board
+//o = player1
+//x = player2 or AI
+//  1 2 3 4 5 6 7 8
+//1 x   x   x   x  
+//2   x   x   x   x
+//3 x   x   x   x  
+//4
+//5
+//6   o   o   o   o
+//7 o   o   o   o
+//8   o   o   o   o
+
+//first number is column, second number is row
+const int rgb11 = ?; //corresponds to button11
+const int rgb13 = ?; // |
+const int rgb15 = ?; // v
+const int rgb17 = ?;
+const int rgb22 = ?;
+const int rgb24 = ?;
+const int rgb26 = ?;
+const int rgb28 = ?;
+const int rgb31 = ?;
+const int rgb33 = ?;
+const int rgb35 = ?;
+const int rgb37 = ?;
+const int rgb42 = ?;
+const int rgb44 = ?;
+const int rgb46 = ?;
+const int rgb48 = ?;
+const int rgb51 = ?;
+const int rgb53 = ?;
+const int rgb55 = ?;
+const int rgb57 = ?;
+const int rgb62 = ?;
+const int rgb64 = ?;
+const int rgb66 = ?;
+const int rgb68 = ?;
+const int rgb71 = ?;
+const int rgb73 = ?;
+const int rgb75 = ?;
+const int rgb77 = ?;
+const int rgb82 = ?;
+const int rgb84 = ?;
+const int rgb86 = ?;
+const int rgb88 = ?;
+
+//first number is column, second number is row
+const int button11 = ?; //corresponds to rgb11
+const int button13 = ?; // |
+const int button15 = ?; // v
+const int button17 = ?;
+const int button22 = ?;
+const int button24 = ?;
+const int button26 = ?;
+const int button28 = ?;
+const int button31 = ?;
+const int button33 = ?;
+const int button35 = ?;
+const int button37 = ?;
+const int button42 = ?;
+const int button44 = ?;
+const int button46 = ?;
+const int button48 = ?;
+const int button51 = ?;
+const int button53 = ?;
+const int button55 = ?;
+const int button57 = ?;
+const int button62 = ?;
+const int button64 = ?;
+const int button66 = ?;
+const int button68 = ?;
+const int button71 = ?;
+const int button73 = ?;
+const int button75 = ?;
+const int button77 = ?;
+const int button82 = ?;
+const int button84 = ?;
+const int button86 = ?;
+const int button88 = ?;
+
+
+//first number is column, second number is row
+int buttonState11 = 0; // corresponds to button11
+int buttonState13 = 0; // |
+int buttonState15 = 0; // v
+int buttonState17 = 0;
+int buttonState22 = 0;
+int buttonState24 = 0;
+int buttonState26 = 0;
+int buttonState28 = 0;
+int buttonState31 = 0;
+int buttonState33 = 0;
+int buttonState35 = 0;
+int buttonState37 = 0;
+int buttonState42 = 0;
+int buttonState44 = 0;
+int buttonState46 = 0;
+int buttonState48 = 0;
+int buttonState51 = 0;
+int buttonState53 = 0;
+int buttonState55 = 0;
+int buttonState57 = 0;
+int buttonState62 = 0;
+int buttonState64 = 0;
+int buttonState66 = 0;
+int buttonState68 = 0;
+int buttonState71 = 0;
+int buttonState73 = 0;
+int buttonState75 = 0;
+int buttonState77 = 0;
+int buttonState82 = 0;
+int buttonState84 = 0;
+int buttonState86 = 0;
+int buttonState88 = 0;
+
+//colors
+int redValue = 0;
+int greenvalue = 0;
+int bluevalue = 0;
+
+int pos1;//pos1 is first peice clicked
+int pos2;//pos2 is place you want to put peice
+
+//2d array of 8 by 8 for board
+int board[][] = {{1, 2, 3, 4, 5, 6, 7, 8}, {1, 2, 3, 4, 5, 6, 7, 8}};//
+bool peice[][] = {{1, 2, 3, 4, 5, 6, 7, 8}, {1, 2, 3, 4, 5, 6, 7, 8}};
+bool player[][] = true;
+bool king[][] = false;
+
+bool turn = true;//if true player1 turn if false player2 turn
+
+//players
+void player1() {
+  //blue
+  redvalue = 0;
+  greenvalue = 0;
+  bluevalue = 255;
+}
+
+void player2() {
+  //yellow
+  //all player two pieces go to yellow
+  redvalue = 255;
+  greenvalue = 255;
+  bluevalue = 0;
+}
+
+//moves
+class resetTurn() { //starts turn over
+    pos1 = //next input
+}
+
+void nextJump() {
+  pos2 = pos1;
+  redvalue = 0;
+  greenvalue = 255;
+  bluevalue = 0;
+}
+
+void bad(int red) {//all lights are red
+  analogWrite(rgb11, red);
+  analogWrite(rgb13, red);
+  analogWrite(rgb15, red);
+  analogWrite(rgb17, red);
+  analogWrite(rgb22, red);
+  analogWrite(rgb24, red);
+  analogWrite(rgb26, red);
+  analogWrite(rgb28, red);
+  analogWrite(rgb31, red);
+  analogWrite(rgb33, red);
+  analogWrite(rgb35, red);
+  analogWrite(rgb37, red);
+  analogWrite(rgb42, red);
+  analogWrite(rgb44, red);
+  analogWrite(rgb46, red);
+  analogWrite(rgb48, red);
+  analogWrite(rgb51, red);
+  analogWrite(rgb53, red);
+  analogWrite(rgb55, red);
+  analogWrite(rgb57, red);
+  analogWrite(rgb62, red);
+  analogWrite(rgb64, red);
+  analogWrite(rgb66, red);
+  analogWrite(rgb68, red);
+  analogWrite(rgb71, red);
+  analogWrite(rgb73, red);
+  analogWrite(rgb75, red);
+  analogWrite(rgb77, red);
+  analogWrite(rgb82, red);
+  analogWrite(rgb84, red);
+  analogWrite(rgb86, red);
+  analogWrite(rgb88, red);
+}
+
+void good(int green) {//all lights are green
+  analogWrite(rgb11, green);
+  analogWrite(rgb13, green);
+  analogWrite(rgb15, green);
+  analogWrite(rgb17, green);
+  analogWrite(rgb22, green);
+  analogWrite(rgb24, green);
+  analogWrite(rgb26, green);
+  analogWrite(rgb28, green);
+  analogWrite(rgb31, green);
+  analogWrite(rgb33, green);
+  analogWrite(rgb35, green);
+  analogWrite(rgb37, green);
+  analogWrite(rgb42, green);
+  analogWrite(rgb44, green);
+  analogWrite(rgb46, green);
+  analogWrite(rgb48, green);
+  analogWrite(rgb51, green);
+  analogWrite(rgb53, green);
+  analogWrite(rgb55, green);
+  analogWrite(rgb57, green);
+  analogWrite(rgb62, green);
+  analogWrite(rgb64, green);
+  analogWrite(rgb66, green);
+  analogWrite(rgb68, green);
+  analogWrite(rgb71, green);
+  analogWrite(rgb73, green);
+  analogWrite(rgb75, green);
+  analogWrite(rgb77, green);
+  analogWrite(rgb82, green);
+  analogWrite(rgb84, green);
+  analogWrite(rgb86, green);
+  analogWrite(rgb88, green);
+}
+
+void normalmove() {
+
+}
+
+void kingmove() {
+
+}
+
+void kingJump() {//can go backward and forward
+  if ((pos2 > pos1 && pos2 = pos1 + /*twospaces away*/) || (pos2 < pos1 && pos2 = pos1 + /*one space away*/) {
+  jump = valid;
+}
+else if (/*jump over opponents piece*/) {
+  jump = valid;
+}
+else {
+  jump = invalid;
+}
+}
+
+void normalJump() {//not actual code just psuedo code
+  if (player1 = true) {
+    if (x + 2 > pin > x) {
+      jump = valid;
+    }
+    else if (/*jump over opponents piece*/) {
+      jump = valid;
+    }
+    else {
+      jump = invalid;
+    }
+  }
+  else {
+    if (x - 2 < pin < x) {
+      jump = valid;
+    }
+    else if (/*jump over opponents piece*/) {
+      jump = valid;
+    }
+    else {
+      jump = invalid;
+    }
+  }
+}
+
+
+//tests
+void playerCheck() {
+  for (i = 7; i > 0; i--) {//loop from far position to move peice closest to opponent
+    for (j = 7; j > 0; j--) {//it should always have the same start peice
+      i = 7;
+      if (digitalWrite(HIGH)) { //piece
+        piece = true;
+        if (redvalue = 255 && greenvalue = 150 && bluevalue = 0) { //player2 king
+          king = true;
+          player = false;
+        }
+        else if (redvalue = 0 && greenvalue = 0 && bluevalue = 255) {//player1
+          player = true;//player1
+        }
+        else if (redvalue = 255 && greenvalue = 255 && blue value = 0) { //player2
+          player = false;
+        }
+        else if (redvalue = 255 && greenvalue = 255 && blue value = 0) { //player1 king
+          king = true;
+          player = true;
+        }
+      }
+      else {
+        piece = false;
+      }
+    }
+  }
+}
+
+void moveCheck(){
+  if(piece = false && j + 1, i + 1 || i - 1 /*is forward*/){
+    move = valid
+  }
+  else{
+    move = invalid
+  }
+}
+
+void kingMoveCheck(){
+  if(piece = false && (j + 1, i + 1 || i - 1) || (j - 1, i + 1 || i - 1)){
+    move = valid
+  }
+  else{
+    move = invalid
+  }
+}
+
+void jumpCheck(){
+  if(piece = false && (j + 1, i + 1 || i- 1) = /*opposite player peice*/ && (j + 2, i + 2 || i - 2)){
+    move = valid
+  }
+  else{
+    move = invalid
+  }
+}
+
+void kingJumpCheck(){
+  if(piece = false && ((j + 1, i + 1 || i - 1) = /*opposite player peice*/ && (j + 2, i + 2 || i - 2)) || ((j - 1, i + 1 || i - 1)= /*opposite player peice*/ && (j - 2, i + 2 || i - 2))){
+    move = valid //maybe make nested if for this stuff
+  }
+  else{
+    move = invalid
+  }
+}
+//valid rgb moves
+void lcd11() {
+  //check the adjecent tiles for a piece and valid moves plus valid jumps
+  //use playercheck
+}
+//do this for all lcds
+
+#define COMMON_ANODE
+
+void setup() {
+  //player one starting pieces
+  digitalWrite(rgb11, HIGH);
+  digitalWrite(rgb13, HIGH);
+  digitalWrite(rgb15, HIGH);
+  digitalWrite(rgb17, HIGH);
+  digitalWrite(rgb22, HIGH);
+  digitalWrite(rgb24, HIGH);
+  digitalWrite(rgb26, HIGH);
+  digitalWrite(rgb28, HIGH);
+  digitalWrite(rgb31, HIGH);
+  digitalWrite(rgb33, HIGH);
+  digitalWrite(rgb35, HIGH);
+  digitalWrite(rgb37, HIGH);
+
+  //player two starting pieces
+  digitalWrite(rgb62, HIGH);
+  digitalWrite(rgb64, HIGH);
+  digitalWrite(rgb66, HIGH);
+  digitalWrite(rgb68, HIGH);
+  digitalWrite(rgb71, HIGH);
+  digitalWrite(rgb73, HIGH);
+  digitalWrite(rgb75, HIGH);
+  digitalWrite(rgb77, HIGH);
+  digitalWrite(rgb82, HIGH);
+  digitalWrite(rgb84, HIGH);
+  digitalWrite(rgb86, HIGH);
+  digitalWrite(rgb88, HIGH);
+
+  //led lights
+  pinMode(rgb11, OUTPUT);
+  pinMode(rgb13, OUTPUT);
+  pinMode(rgb15, OUTPUT);
+  pinMode(rgb17, OUTPUT);
+  pinMode(rgb22, OUTPUT);
+  pinMode(rgb24, OUTPUT);
+  pinMode(rgb26, OUTPUT);
+  pinMode(rgb28, OUTPUT);
+  pinMode(rgb31, OUTPUT);
+  pinMode(rgb33, OUTPUT);
+  pinMode(rgb35, OUTPUT);
+  pinMode(rgb37, OUTPUT);
+  pinMode(rgb42, OUTPUT);
+  pinMode(rgb44, OUTPUT);
+  pinMode(rgb46, OUTPUT);
+  pinMode(rgb48, OUTPUT);
+  pinMode(rgb51, OUTPUT);
+  pinMode(rgb53, OUTPUT);
+  pinMode(rgb55, OUTPUT);
+  pinMode(rgb57, OUTPUT);
+  pinMode(rgb62, OUTPUT);
+  pinMode(rgb64, OUTPUT);
+  pinMode(rgb66, OUTPUT);
+  pinMode(rgb68, OUTPUT);
+  pinMode(rgb71, OUTPUT);
+  pinMode(rgb73, OUTPUT);
+  pinMode(rgb75, OUTPUT);
+  pinMode(rgb77, OUTPUT);
+  pinMode(rgb82, OUTPUT);
+  pinMode(rgb84, OUTPUT);
+  pinMode(rgb86, OUTPUT);
+  pinMode(rgb88, OUTPUT);
+
+  //buttons
+  pinMode(button11, INPUT);
+  pinMode(button13, INPUT);
+  pinMode(button15, INPUT);
+  pinMode(button17, INPUT);
+  pinMode(button22, INPUT);
+  pinMode(button24, INPUT);
+  pinMode(button26, INPUT);
+  pinMode(button28, INPUT);
+  pinMode(button31, INPUT);
+  pinMode(button33, INPUT);
+  pinMode(button35, INPUT);
+  pinMode(button37, INPUT);
+  pinMode(button42, INPUT);
+  pinMode(button44, INPUT);
+  pinMode(button46, INPUT);
+  pinMode(button48, INPUT);
+  pinMode(button51, INPUT);
+  pinMode(button53, INPUT);
+  pinMode(button55, INPUT);
+  pinMode(button57, INPUT);
+  pinMode(button62, INPUT);
+  pinMode(button64, INPUT);
+  pinMode(button66, INPUT);
+  pinMode(button68, INPUT);
+  pinMode(button71, INPUT);
+  pinMode(button73, INPUT);
+  pinMode(button75, INPUT);
+  pinMode(button77, INPUT);
+  pinMode(button82, INPUT);
+  pinMode(button84, INPUT);
+  pinMode(button86, INPUT);
+  pinMode(button88, INPUT);
+
+  //position
+  pinMode(pos1, INPUT); //first button clicked on players turn
+  pinMode(pos2, INPUT); //second button clicked on players turn
+}
+
+void loop() {
+  if (turn == true) {
+    playerCheck();
+    if(player = true){
+      good();//turn player1 peices green to indicate turn
+    }
+    delay(500);
+    player1();//reset all peices to original color and place
+    //player1 
+    if (pos1(piece == true) && player == true) { //go on
+      pos1(greenvalue = 255);
+      if (pos2 = pos1) { //class Reset
+        resetTurn();
+        //pos1 turn back to player color
+        //reset pos1 to next click
+      }
+      else if (pos2(piece = true)/*another checker peice exists on this space*/) { //class bad
+        bad(255);
+        resetPos2();
+        //reset to highlight pos1 green
+      }
+      else { //if piece = false
+        if (pos2 = pos1 + 1/*1 square away from pos1*/) {
+          normalmove();
+          pos2(greenvalue = 255);
+          delay(500);
+          player1();
+          //flash green then place peice go to player color
+        }
+        if (king == true) {
+          if (pos2 = pos1 - 1 /*behind piece by one*/) {
+            if (pos1 =  /*king*/) {
+              kingmove();
+              pos2(greenvalue = 255);
+              delay(500);
+              player1();
+            }
+          }
+        }
+        else if (pos2 = pos1 + 2/*2 away and player2 peice is between*/) {
+          normalJump();
+          pos2(greenvalue = 255);
+          delay(500);
+          player1();
+          //flash green then place peice
+          //opposing piece flashes red then disapears(piece = false)
+          if (/*player2 peice is adjecent to pos2*/) {
+            //stay green
+            pos2 = pos1;
+            //so they can make a jump
+          }
+          else {
+            player1();
+            //go to player color
+          }
+        }
+        else if (pos2 = pos1 - 2/*2 away and player2 peice is between*/) {
+          if (king = true) {
+            kingJump();
+            pos2(greenvalue = 255);
+            delay(500);
+            player1();
+            //flash green then place peice
+            //opposing piece flashes red then disapears(piece = false)
+            if (/*player2 peice is adjecent to pos2*/) {
+              //stay green
+              pos2 = pos1;
+              //so they can make a jump
+            }
+            else {
+              player1();
+              //go to player color
+            }
+          }
+          else {
+            bad();
+          }
+        }
+        else { //class Bad
+          //flash red for 1 sec
+          pos1(redvalue = 255);
+          pos2(redvalue = 255);
+          delay(1000);
+          player1();
+          //reset to highlight pos1 green
+        }
+      }
+    }
+    else {
+      bad();
+    }
+    //at end of turn
+    turn = false;
+    piecearray[x2][y2] = true
+                         pos2 = piece = true;
+    pos1 = piece = false;
+  }
+  else {
+    //player2 turn
+    //pos1 = greenvalue = 255
+    if (pos1 piece == true) { //go on
+      if (king == true) { //maybe make a class? class King
+        if (pos2 = pos1) { //class Reset
+          //pos1 turn back to player color
+          //reset pos1 to next click
+        }
+        else if (pos2 piece = true /*another checker peice exists on this space*/) { //class Nope
+          //flash red for 1 sec
+          //reset to highlight pos1 green
+        }
+        else {
+          if (pos2 = /*1 square away from pos1*/) { //class Move
+            //flash green then place peice go to player color
+            //turn++
+          }
+          else if (pos2 = /*2 away and player1 peice is between*/) { //class Jump
+            //flash green then place peice
+            //opposing piece flashes red then disapears
+            if (/*player1 peice is adjecent to pos2*/) {
+              //stay green
+              pos2 = pos1;
+            }
+            else {
+              //go to player color
+              //player turn++
+            }
+          }
+          else { //class Bad
+            //flash red for 1 sec
+            //reset to highlight pos1 green
+          }
+        }
+      }
+      else {
+        if (pos2 = pos1) {
+          //pos1 turn back to player color
+          //reset pos1 to next click
+        }
+        else if (pos2 = /*another checker peice exists on this space*/) {
+          //flash red for 1 sec
+          //reset to highlight pos1 green
+        }
+        else {
+          if (pos2 = /*1 square away from pos1 && forward*/) {
+            //flash green then place peice go to player color
+            //turn++
+          }
+          else if (pos2 = /*2 away and player1 peice is between && forward*/) {
+            //flash green then place peice
+            //opposing piece flashes red then disapears
+            if (/*player1 peice is adjecent to pos2 && forward*/) {
+              //stay green
+              pos2 = pos1;
+              //reset to top condition as if a new turn has started
+            }
+            else {
+              //go to player color
+              //player turn++
+            }
+          }
+          else {
+            //flash red for 1 sec
+            //reset to highlight pos1 green
+          }
+        }
+      }
+    }
+    else {
+      //flash red reset turn
+    }
+    //at end of turn
+    turn = true;
+                         pos2 = piece == true;
+    pos1(piece == false);
+  }
+}
